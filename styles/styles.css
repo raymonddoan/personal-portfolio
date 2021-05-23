@@ -1,0 +1,22 @@
+body {
+  color: #f2f2f2;
+  background-color: #181818;
+}
+
+nav {
+  background-color: grey;
+  overflow: hidden;
+  position: relative;
+}
+
+nav #subnav {
+  display: none;
+}
+
+nav a {
+  color: white;
+  padding: 1.5rem 1.5rem;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
