@@ -48,6 +48,40 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+  @keyframes showEmail {
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+  }
+  @keyframes hideEmail {
+    0% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+    30% {
+      opacity: 0;
+    }
+  }
+  @keyframes growLink {
+    0% {
+      width: 7.5rem;
+    }
+    100% {
+      width: 16rem;
+    }
+  }
+  @keyframes shrinkLink {
+    0% {
+      width: 16rem;
+    }
+    100% {
+      width: 7.5rem;
+    }
+  }
   #top-nav {
     position: fixed;
     justify-content: flex-start;
@@ -78,6 +112,7 @@ body {
   .menu-list li {
     display: flex;
     align-items: stretch;
+    overflow: hidden;
     border-bottom: none;
     border-right: 1px solid white;
     padding: none;
@@ -87,6 +122,19 @@ body {
     display: flex;
     align-items: center;
     transition: all 0.5s linear;
+  }
+  .menu-list #contact-li {
+    animation: shrinkLink 1s forwards;
+  }
+  .menu-list #contact-li .contact-link::after {
+    content: "Contact Me";
+    animation: hideEmail 1s forwards;
+  }
+  .menu-list #contact-li:hover {
+    animation: growLink 1s forwards;
+  }
+  .menu-list #contact-li:hover .contact-link::after {
+    animation: showEmail 1s forwards;
   }
 
   #icon-container {
