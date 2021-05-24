@@ -7,13 +7,14 @@ body {
   color: #f2f2f2;
   background-color: #181818;
   min-height: 100vh;
+  margin: 0px;
 }
 
 #top-nav {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  flex-direction: column;
   padding: 0.5rem 0.5rem 0;
   overflow: hidden;
 }
@@ -30,7 +31,7 @@ body {
   list-style-type: none;
 }
 .menu-list li {
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   padding: 0.2rem 0;
   text-align: center;
 }
@@ -51,29 +52,41 @@ body {
     position: fixed;
     justify-content: flex-start;
     flex-direction: row;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     padding: 0 0 0;
-    height: 4rem;
+    height: 2.5rem;
     width: 100%;
   }
 
   .logo-container {
-    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
+    border-right: 1px solid white;
     padding: 0 0.5rem;
+    height: 100%;
+    font-weight: 700;
   }
 
   .menu-list {
     display: flex;
-    height: 100%;
     transition: none;
-    padding: 0 0 0;
+    height: 100%;
+    padding: none;
+    opacity: 1;
   }
   .menu-list li {
-    border-right: 2px solid white;
+    display: flex;
+    align-items: stretch;
+    border-bottom: none;
+    border-right: 1px solid white;
+    padding: none;
+  }
+  .menu-list li a {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s linear;
   }
 
   #icon-container {

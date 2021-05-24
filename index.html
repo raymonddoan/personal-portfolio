@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- fav-icon -->
+    <link rel="apple-touch-icon" href="./fav-icon.png">
+    <link rel="icon" href="./fav-icon.png">
+
+    <!-- Hamburger and other styles -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -18,12 +23,14 @@
     />
     <link rel="stylesheet" href="./styles/styles.css" />
 
+    <!-- JS Script -->
     <script src="./js/script.js" defer></script>
   </head>
+  
   <body>
     <!-- Top Navbar -->
     <nav id="top-nav">
-      <a href="#home" class="logo-container">Logo</a>
+      <img class="logo-container" src="./fav-icon.png"></img>
 
       <!-- Hamburger Menu -->
       <div id="icon-container">
@@ -33,14 +40,24 @@
       </div>
 
       <!-- Menu List -->
-      <ul class="menu-list">
+      <div class="menu-list">
         <li id="cv-li">
-          <a aria-label="#" rel="noopener" target="_blank" href="#">CV</a>
+          <a 
+            aria-label="#" 
+            rel="noopener" 
+            target="_blank" 
+            href="#"
+          >CV</a>
         </li>
         <li id="contact-li">
-          <a href="#contact">Contact Email</a>
+          <a 
+            aria-label="#" 
+            rel="noopener" 
+            class="contact-link" 
+            href="mailto:raymond.doan94@gmail.com"
+          >Contact Me</a>
         </li>
-      </ul>
+      </div>
     </nav>
 
     <!-- Side Navbar -->
