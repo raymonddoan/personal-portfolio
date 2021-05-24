@@ -1,23 +1,233 @@
+// Mixins
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+// Variables
+$dark: rgb(24, 24, 24);
+
+// App Styling
+:root {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+}
+
 body {
   color: #f2f2f2;
-  background-color: rgb(24, 24, 24);
+  background-color: $dark;
+  min-height: 100vh;
+  margin: 0px;
 }
 
-nav {
-  background-color: grey;
+#top-nav {
+  @include flexColumn;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.5rem 0.5rem 0;
   overflow: hidden;
-  position: relative;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
 }
 
-nav #subnav {
+.logo-container,
+#side-nav {
   display: none;
 }
 
-nav a {
-  color: white;
-  padding: 1.5rem 1.5rem;
+// Menu
+.menu-list {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+  list-style-type: none;
+
+  li {
+    border-bottom: 1px solid white;
+    padding: 0.2rem 0;
+    text-align: center;
+
+    a {
+      width: 100%;
+      text-decoration: none;
+      color: white;
+      padding: 0.2rem 0;
+      transition: all 0.5s;
+    }
+  }
+
+  #cv-li {
+    display: flex;
+    justify-content: center;
+
+    .cv-link {
+      &::after {
+        content: "Resume / CV";
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  #contact-li {
+    display: flex;
+    justify-content: center;
+
+    .contact-link {
+      &::after {
+        content: "raymond.doan94@gmail.com";
+        font-size: 0.75rem;
+      }
+
+    }
+  }
+}
+
+// Toggle Hamburger Menu for Menu List
+.open {
+  transition: all 0.5s;
+  height: 5rem;
+}
+
+// Icon Size
+.fa {
   font-size: 2rem;
+}
+
+// Desktop View
+@media screen and (min-width: 800px) {
+  // Keyframes for Changes in Navbar
+  @keyframes showEmail {
+    0% {}
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+  }
+
+  @keyframes hideEmail {
+    0% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {}
+  }
+
+  @keyframes growLink {
+    0% {
+      width: 7.5rem;
+    }
+    100% {
+      width: 16rem;
+    }
+  }
+
+  @keyframes shrinkLink {
+    0% {
+      width: 16rem;
+    }
+    100% {
+      width: 7.5rem;
+    }
+  }
+
+  #top-nav {
+    height: 2.5rem;
+    width: 100%;
+    position: fixed;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+    padding: 0 0 0;
+  }
+
+  .logo-container {
+    height: 100%;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+    padding: 0 0.5rem;
+  }
+
+  .menu-list {
+    height: 100%;
+    display: flex;
+    transition: none;
+    padding: none;
+    opacity: 1;
+
+    li {
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      border-bottom: none;
+      border-right: 1px solid white;
+      padding: none;
+
+      a {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        transition: all 0.5s linear;
+      }
+    }
+
+    #contact-li {
+      animation: shrinkLink 1s forwards;
+      .contact-link {
+        &::after {
+          content: "Contact Me";
+          animation: hideEmail 1s forwards;
+        }
+      }
+      &:hover {
+        animation: growLink 1s forwards;
+        .contact-link {
+          &::after {
+            animation: showEmail 1s forwards;
+          }
+        }
+      }
+    }
+  }
+
+  #icon-container {
+    display: none;
+  }
+
+  #side-nav {
+    height: 100vh;
+    width: 4.3rem;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-right: 1px solid white;
+
+    div {
+      flex-direction: column;
+
+      li {
+        width: 4.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid white;
+        padding: 0.5rem 0 ;
+        list-style-type: none;
+
+        
+        a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
 }

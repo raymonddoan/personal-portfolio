@@ -1,22 +1,193 @@
+:root {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+}
+
 body {
   color: #f2f2f2;
   background-color: #181818;
+  min-height: 100vh;
+  margin: 0px;
 }
 
-nav {
-  background-color: grey;
+#top-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.5rem 0.5rem 0;
   overflow: hidden;
-  position: relative;
 }
 
-nav #subnav {
+.logo-container,
+#side-nav {
   display: none;
 }
 
-nav a {
+.menu-list {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+  list-style-type: none;
+}
+.menu-list li {
+  border-bottom: 1px solid white;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+.menu-list li a {
+  width: 100%;
+  text-decoration: none;
   color: white;
-  padding: 1.5rem 1.5rem;
+  padding: 0.2rem 0;
+  transition: all 0.5s;
+}
+.menu-list #cv-li {
+  display: flex;
+  justify-content: center;
+}
+.menu-list #cv-li .cv-link::after {
+  content: "Resume / CV";
+  font-size: 0.75rem;
+}
+.menu-list #contact-li {
+  display: flex;
+  justify-content: center;
+}
+.menu-list #contact-li .contact-link::after {
+  content: "raymond.doan94@gmail.com";
+  font-size: 0.75rem;
+}
+
+.open {
+  transition: all 0.5s;
+  height: 5rem;
+}
+
+.fa {
   font-size: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  @keyframes showEmail {
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+  }
+  @keyframes hideEmail {
+    0% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+    30% {
+      opacity: 0;
+    }
+  }
+  @keyframes growLink {
+    0% {
+      width: 7.5rem;
+    }
+    100% {
+      width: 16rem;
+    }
+  }
+  @keyframes shrinkLink {
+    0% {
+      width: 16rem;
+    }
+    100% {
+      width: 7.5rem;
+    }
+  }
+  #top-nav {
+    height: 2.5rem;
+    width: 100%;
+    position: fixed;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+    padding: 0 0 0;
+  }
+
+  .logo-container {
+    height: 100%;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+    padding: 0 0.5rem;
+  }
+
+  .menu-list {
+    height: 100%;
+    display: flex;
+    transition: none;
+    padding: none;
+    opacity: 1;
+  }
+  .menu-list li {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-bottom: none;
+    border-right: 1px solid white;
+    padding: none;
+  }
+  .menu-list li a {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s linear;
+  }
+  .menu-list #contact-li {
+    animation: shrinkLink 1s forwards;
+  }
+  .menu-list #contact-li .contact-link::after {
+    content: "Contact Me";
+    animation: hideEmail 1s forwards;
+  }
+  .menu-list #contact-li:hover {
+    animation: growLink 1s forwards;
+  }
+  .menu-list #contact-li:hover .contact-link::after {
+    animation: showEmail 1s forwards;
+  }
+
+  #icon-container {
+    display: none;
+  }
+
+  #side-nav {
+    height: 100vh;
+    width: 4.3rem;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-right: 1px solid white;
+  }
+  #side-nav div {
+    flex-direction: column;
+  }
+  #side-nav div li {
+    width: 4.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    padding: 0.5rem 0;
+    list-style-type: none;
+  }
+  #side-nav div li a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
