@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./styles/styles.css">
+    <title>Raymond Doan</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
 
-  <title>Raymond Doan</title>
-</head>
-<body>
-  <nav>
-    <a href="#home" class="active">Logo</a>
-    <div id="subnav">
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact Email</a>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="openHamburger">
-      <i class="fa fa-bars"></i>
-    </a>
-  </nav>
-</body>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <nav id="top-nav">
+      <a href="#home" class="logo-container">Logo</a>
+
+      <!-- Hamburger Menu -->
+      <div id="icon-container">
+        <a id="menu-icon">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <!-- Menu List -->
+      <ul class="menu-list">
+        <li id="cv-li">
+          <a aria-label="#" rel="noopener" target="_blank" href="#">CV</a>
+        </li>
+        <li id="contact-li">
+          <a href="#contact">Contact Email</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Side Navbar -->
+    <nav id="side-nav"></nav>
+  </body>
 </html>

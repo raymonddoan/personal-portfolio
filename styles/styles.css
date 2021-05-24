@@ -1,22 +1,84 @@
+:root {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+}
+
 body {
   color: #f2f2f2;
   background-color: #181818;
+  min-height: 100vh;
 }
 
-nav {
-  background-color: grey;
+#top-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 0.5rem 0.5rem 0;
   overflow: hidden;
-  position: relative;
 }
 
-nav #subnav {
+.logo-container {
   display: none;
 }
 
-nav a {
+.menu-list {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+  list-style-type: none;
+}
+.menu-list li {
+  border-bottom: 2px solid white;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+.menu-list li a {
+  text-decoration: none;
   color: white;
-  padding: 1.5rem 1.5rem;
-  font-size: 2rem;
+  transition: all 0.5s;
+  padding: 1.5rem 0;
+}
+
+.open {
+  transition: all 0.5s;
+  height: 5rem;
+}
+
+@media screen and (min-width: 800px) {
+  #top-nav {
+    position: fixed;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-bottom: 2px solid white;
+    padding: 0 0 0;
+    height: 4rem;
+    width: 100%;
+  }
+
+  .logo-container {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    padding: 0 0.5rem;
+  }
+
+  .menu-list {
+    display: flex;
+    height: 100%;
+    transition: none;
+    padding: 0 0 0;
+  }
+  .menu-list li {
+    border-right: 2px solid white;
+  }
+
+  #icon-container {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
