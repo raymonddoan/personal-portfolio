@@ -37,15 +37,36 @@ body {
   text-align: center;
 }
 .menu-list li a {
+  width: 100%;
   text-decoration: none;
   color: white;
-  padding: 1.5rem 0;
+  padding: 0.2rem 0;
   transition: all 0.5s;
+}
+.menu-list #cv-li {
+  display: flex;
+  justify-content: center;
+}
+.menu-list #cv-li .cv-link::after {
+  content: "Resume / CV";
+  font-size: 0.75rem;
+}
+.menu-list #contact-li {
+  display: flex;
+  justify-content: center;
+}
+.menu-list #contact-li .contact-link::after {
+  content: "raymond.doan94@gmail.com";
+  font-size: 0.75rem;
 }
 
 .open {
   transition: all 0.5s;
   height: 5rem;
+}
+
+.fa {
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -166,9 +187,6 @@ body {
   #side-nav div li a {
     text-decoration: none;
     color: white;
-  }
-  #side-nav div li a i {
-    font-size: 2rem;
   }
 }
 
