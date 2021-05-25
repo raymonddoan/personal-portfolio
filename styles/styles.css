@@ -136,6 +136,35 @@ body {
   display: block;
 }
 
+#projects {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#projects .projects-container {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid white;
+}
+#projects .projects-container .projects__img-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  border: 3px solid white;
+  border-bottom: none;
+}
+#projects .projects-container .projects__img-container:hover .shown-image {
+  transition: all 0.5s;
+  top: 0;
+}
+#projects .projects-container .shown-image {
+  position: absolute;
+  top: 100%;
+  transition: all 0.5s;
+}
+#projects .projects-container img {
+  width: 100%;
+}
+
 .open {
   transition: all 0.5s;
   height: 5rem;
@@ -303,7 +332,6 @@ body {
 
   .about {
     max-width: 40rem;
-    height: 0;
     transition: all 0.7s ease;
     overflow: hidden;
   }
