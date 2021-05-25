@@ -4,9 +4,12 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #f2f2f2;
   background-color: #181818;
   min-height: 100vh;
+  position: relative;
   margin: 0px;
 }
 
@@ -58,6 +61,79 @@ body {
 .menu-list #contact-li .contact-link::after {
   content: "raymond.doan94@gmail.com";
   font-size: 0.75rem;
+}
+
+.content-wrapper {
+  padding: 0.5rem;
+}
+
+#heading-container {
+  max-width: 40rem;
+  overflow: hidden;
+}
+#heading-container h1 {
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 0;
+  overflow: hidden;
+}
+#heading-container h2 {
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 0 0 0.25rem;
+  overflow: hidden;
+}
+
+.heading-line {
+  margin: 1rem 0;
+  display: block;
+  max-width: 60%;
+  height: 3px;
+  background-color: white;
+}
+
+#read-more {
+  width: 8rem;
+  background-color: #181818;
+  color: white;
+  border: 2px solid white;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.75rem;
+  display: block;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#read-more:hover {
+  background-color: white;
+  color: #181818;
+}
+
+.about {
+  max-width: 40rem;
+  height: 0;
+  transition: all 0.7s ease;
+  overflow: hidden;
+}
+.about h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.about p {
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
+}
+
+.open-about {
+  transition: all 1s ease;
+  height: 20rem;
+  display: block;
 }
 
 .open {
@@ -167,6 +243,7 @@ body {
     height: 100vh;
     width: 4.3rem;
     left: 0;
+    position: fixed;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -187,6 +264,61 @@ body {
   #side-nav div li a {
     text-decoration: none;
     color: white;
+  }
+
+  .content-wrapper {
+    max-width: 90vw;
+    padding: 4rem 1rem 1rem 6rem;
+  }
+
+  #heading-container {
+    max-width: 40rem;
+  }
+  #heading-container h1 {
+    font-size: 3rem;
+  }
+  #heading-container h2 {
+    font-size: 3rem;
+  }
+
+  #read-more {
+    width: 8rem;
+    background-color: #181818;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.75rem;
+    display: block;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  #read-more:hover {
+    background-color: white;
+    color: #181818;
+  }
+
+  .about {
+    max-width: 40rem;
+    height: 0;
+    transition: all 0.7s ease;
+    overflow: hidden;
+  }
+  .about h3 {
+    margin: 0.75rem 0;
+    font-size: 1.2rem;
+  }
+  .about p {
+    line-height: 1.2;
+    max-width: 90%;
+    margin: 0.75rem 0;
+    font-size: 0.8rem;
+  }
+
+  .open-about {
+    height: 20rem;
   }
 }
 

@@ -14,9 +14,11 @@ $dark: rgb(24, 24, 24);
 }
 
 body {
+  @include flexColumn;
   color: #f2f2f2;
   background-color: $dark;
   min-height: 100vh;
+  position: relative;
   margin: 0px;
 }
 
@@ -79,6 +81,85 @@ body {
 
     }
   }
+}
+
+.content-wrapper {
+  padding: 0.5rem;
+}
+
+// Content Header
+#heading-container {
+  max-width: 40rem;
+  overflow: hidden;
+  h1 {
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0;
+    overflow: hidden;
+  };
+  h2 {
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0 0 0.25rem;
+    overflow: hidden;
+  };
+}
+
+.heading-line {
+  margin: 1rem 0;
+  display: block;
+  max-width: 60%;
+  height: 3px;
+  background-color: white;
+}
+
+// About Me Button
+#read-more {
+  width: 8rem;
+  background-color: $dark;
+  color: white;
+  border: 2px solid white;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.75rem;
+
+  display: block;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: white;
+    color: $dark;
+  }
+}
+
+// About Me
+.about {
+  max-width: 40rem;
+  height: 0;
+  transition: all 0.7s ease;
+  overflow: hidden;
+  h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  };
+  p {
+    margin: 0.5rem 0;
+    font-size: 0.75rem;
+  }
+}
+
+// Toggle the About Section
+.open-about {
+  transition: all 1s ease;
+  height: 20rem;
+  display: block;
 }
 
 // Toggle Hamburger Menu for Menu List
@@ -205,6 +286,7 @@ body {
     height: 100vh;
     width: 4.3rem;
     left: 0;
+    position: fixed;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -229,5 +311,66 @@ body {
         }
       }
     }
+  }
+
+  .content-wrapper {
+    max-width: 90vw;
+    padding: 4rem 1rem 1rem 6rem;
+  }
+
+  #heading-container {
+    max-width: 40rem;
+    h1 {
+      font-size: 3rem;
+    };
+    h2 {
+      font-size: 3rem;
+    };
+  }
+  
+  
+  // About Me Button
+  #read-more {
+    width: 8rem;
+    background-color: $dark;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.75rem;
+  
+    display: block;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.5rem;
+  
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: white;
+      color: $dark;
+    }
+  }
+  
+  // About Me
+  .about {
+    max-width: 40rem;
+    height: 0;
+    transition: all 0.7s ease;
+    overflow: hidden;
+    h3 {
+      margin: 0.75rem 0;
+      font-size: 1.2rem;
+    };
+    p {
+      line-height: 1.2;
+      max-width: 90%;
+      margin: 0.75rem 0;
+      font-size: 0.8rem;
+    };
+  }
+  
+  // Toggle the About Section
+  .open-about {
+    height: 20rem;
   }
 }
