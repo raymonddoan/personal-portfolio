@@ -141,7 +141,7 @@ body {
   height: 5rem;
 }
 
-.fa {
+.fab {
   font-size: 2rem;
 }
 
@@ -183,6 +183,7 @@ body {
   #top-nav {
     height: 2.5rem;
     width: 100%;
+    background-color: #181818;
     position: fixed;
     justify-content: flex-start;
     flex-direction: row;
