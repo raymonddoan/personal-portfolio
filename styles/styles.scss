@@ -13,6 +13,7 @@ $dark: rgb(24, 24, 24);
   font-size: 1.5rem;
 }
 
+// Global Styling
 body {
   @include flexColumn;
   color: #f2f2f2;
@@ -22,6 +23,17 @@ body {
   margin: 0px;
 }
 
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
+}
+
+// Navbars
 #top-nav {
   @include flexColumn;
   justify-content: flex-end;
@@ -33,6 +45,15 @@ body {
 .logo-container,
 #side-nav {
   display: none;
+}
+
+#menu-icon {
+  border: none;
+  margin: 0;
+
+  i {
+    font-size: 30px;
+  }
 }
 
 // Menu
@@ -53,6 +74,7 @@ body {
       text-decoration: none;
       color: white;
       padding: 0.2rem 0;
+      border: none;
       transition: all 0.5s;
     }
   }
@@ -120,6 +142,9 @@ body {
 // About Me Button
 #read-more {
   width: 8rem;
+}
+
+#read-more, a {
   background-color: $dark;
   color: white;
   border: 2px solid white;
@@ -145,14 +170,6 @@ body {
   height: 0;
   transition: all 0.7s ease;
   overflow: hidden;
-  h3 {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  };
-  p {
-    margin: 0.5rem 0;
-    font-size: 0.75rem;
-  }
 }
 
 // Toggle the About Section
@@ -162,6 +179,62 @@ body {
   display: block;
 }
 
+// Projects
+#projects {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .projects-container {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid white;
+
+    .projects__img-container {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid white;
+
+      &:hover {
+        .hover-image {
+          transition: all 0.5s;
+          top: 0
+        }
+      }
+
+    }
+    .hover-image {
+      position: absolute;
+      top: 100%;
+      transition: all 0.5s;
+    }
+    img {
+      vertical-align: bottom;
+      width: 100%;
+    }
+
+    .projects__text-container {
+      .projects__link-container {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+          width: 100%;
+          text-decoration: none;
+        }
+      }
+
+      .projects__tools-container {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-evenly;
+
+        .fab {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
 // Toggle Hamburger Menu for Menu List
 .open {
   transition: all 0.5s;
@@ -169,7 +242,7 @@ body {
 }
 
 // Icon Size
-.fa {
+.fab {
   font-size: 2rem;
 }
 
@@ -219,6 +292,7 @@ body {
   #top-nav {
     height: 2.5rem;
     width: 100%;
+    background-color: $dark;
     position: fixed;
     justify-content: flex-start;
     flex-direction: row;
@@ -354,7 +428,6 @@ body {
   // About Me
   .about {
     max-width: 40rem;
-    height: 0;
     transition: all 0.7s ease;
     overflow: hidden;
     h3 {

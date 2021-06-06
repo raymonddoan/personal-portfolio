@@ -12,10 +12,6 @@
     <link rel="icon" href="./fav-icon.png">
 
     <!-- Hamburger and other styles -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
@@ -24,6 +20,7 @@
     <link rel="stylesheet" href="./styles/styles.css" />
 
     <!-- JS Script -->
+    <script src="https://kit.fontawesome.com/49208fbb48.js" crossorigin="anonymous"></script>
     <script src="./js/script.js" defer></script>
   </head>
   
@@ -35,7 +32,7 @@
       <!-- Hamburger Menu -->
       <div id="icon-container">
         <a id="menu-icon">
-          <i class="fa fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </a>
       </div>
 
@@ -70,7 +67,7 @@
             href=""
             rel="noopener"
             target="_blank"
-          ><i class="fa fa-linkedin"></i></a>
+          ><i class="fab fa-linkedin"></i></a>
         </li>
         <li>
           <a 
@@ -78,7 +75,7 @@
             href=""
             rel="noopener"
             target="_blank"
-          ><i class="fa fa-github"></i></a>
+          ><i class="fab fa-github"></i></a>
         </li>
       </div>
     </nav>
@@ -107,7 +104,80 @@
       </section>
 
       <!-- Projects Section -->
-      <section id="projects">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur quas ex mollitia odit. Nesciunt animi omnis id ipsa similique.</section>
+      <section id="projects">
+
+        <!-- Project #1 -->
+        <div class="projects-container">
+          <div class="projects__img-container">
+            <div class="shown-image">
+              <picture>
+                <source media="(max-width: 500px)" srcset="./images/662-500x500.jpg" type="image/jpg">
+                <img src="./images/662-500x500.jpg" alt="Shown Image">
+              </picture>
+            </div>
+            <div class="hover-image">
+              <picture>
+                <source media="(max-width: 500px)" srcset="./images/856-500x500.jpg" type="image/jpg">
+                <img src="./images/856-500x500.jpg" alt="Hover Image" >
+              </picture>
+            </div>
+          </div>
+          <div class="projects__text-container">
+            <div class="projects__link-container">
+              <a href="http://" target="_blank" rel="noopener noreferrer">Live App</a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">See Code</a>
+            </div>
+            <div class="projects__contents-container">
+              <h3>Rails Marketplace App</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur quas ex mollitia odit. Nesciunt animi omnis id ipsa similique.
+              </p>
+            </div>
+            <div class="projects__tools-container">
+              <i class="fab fa-react"></i>
+              <i class="fab fa-js"></i>
+              <i class="fab fa-vuejs"></i>
+              <i class="fab fa-google"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project #2 -->
+        <div class="projects-container">
+          <div class="projects__img-container">
+            <div class="shown-image">
+              <picture>
+                <source media="(max-width: 500px)" srcset="./images/sample-shown-500.webp" type="image/webp">
+                <img src="./images/sample-shown-500.webp" alt="Shown Image">
+              </picture>
+            </div>
+            <div class="hover-image">
+              <picture>
+                <source media="(max-width: 500px)" srcset="./images/sample-hover-500.webp" type="image/webp">
+                <img src="./images/sample-hover-500.webp" alt="Hover Image" >
+              </picture>
+            </div>
+          </div>
+          <div class="projects__text-container">
+            <div class="projects__link-container">
+              <a href="http://" target="_blank" rel="noopener noreferrer">Live App</a>
+              <a href="http://" target="_blank" rel="noopener noreferrer">See Code</a>
+            </div>
+            <div class="projects__contents-container">
+              <h3>Gradient Generator React App</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur quas ex mollitia odit. Nesciunt animi omnis id ipsa similique.
+              </p>
+            </div>
+            <div class="projects__tools-container">
+              <i class="fab fa-react"></i>
+              <i class="fab fa-js"></i>
+              <i class="fab fa-vuejs"></i>
+              <i class="fab fa-google"></i>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
