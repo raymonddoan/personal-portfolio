@@ -50,6 +50,10 @@ p {
 #menu-icon {
   border: none;
   margin: 0;
+
+  i {
+    font-size: 30px;
+  }
 }
 
 // Menu
@@ -217,8 +221,6 @@ p {
           text-decoration: none;
         }
       }
-
-      .projects__contents-container {}
 
       .projects__tools-container {
         margin: 1rem 0;

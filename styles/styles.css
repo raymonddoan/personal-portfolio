@@ -56,6 +56,10 @@ p {
   margin: 0;
 }
 
+#menu-icon i {
+  font-size: 30px;
+}
+
 .menu-list {
   height: 0;
   width: 100%;
