@@ -4,8 +4,13 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #f2f2f2;
   background-color: #181818;
   min-height: 100vh;
@@ -13,11 +18,30 @@ body {
   margin: 0px;
 }
 
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
+}
+
 #top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding: 0.5rem 0.5rem 0;
   overflow: hidden;
 }
@@ -27,37 +51,59 @@ body {
   display: none;
 }
 
+#menu-icon {
+  border: none;
+  margin: 0;
+}
+
 .menu-list {
   height: 0;
   width: 100%;
   overflow: hidden;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   list-style-type: none;
 }
+
 .menu-list li {
   border-bottom: 1px solid white;
   padding: 0.2rem 0;
   text-align: center;
 }
+
 .menu-list li a {
   width: 100%;
   text-decoration: none;
   color: white;
   padding: 0.2rem 0;
+  border: none;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 .menu-list #cv-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .menu-list #cv-li .cv-link::after {
   content: "Resume / CV";
   font-size: 0.75rem;
 }
+
 .menu-list #contact-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .menu-list #contact-li .contact-link::after {
   content: "raymond.doan94@gmail.com";
   font-size: 0.75rem;
@@ -71,6 +117,7 @@ body {
   max-width: 40rem;
   overflow: hidden;
 }
+
 #heading-container h1 {
   line-height: 1;
   font-weight: 800;
@@ -79,6 +126,7 @@ body {
   margin: 0;
   overflow: hidden;
 }
+
 #heading-container h2 {
   line-height: 1;
   font-weight: 400;
@@ -98,6 +146,9 @@ body {
 
 #read-more {
   width: 8rem;
+}
+
+#read-more, a {
   background-color: #181818;
   color: white;
   border: 2px solid white;
@@ -108,9 +159,11 @@ body {
   padding: 0.25rem 0.75rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-#read-more:hover {
+
+#read-more:hover, a:hover {
   background-color: white;
   color: #181818;
 }
@@ -118,19 +171,13 @@ body {
 .about {
   max-width: 40rem;
   height: 0;
+  -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   overflow: hidden;
 }
-.about h3 {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
-.about p {
-  margin: 0.5rem 0;
-  font-size: 0.75rem;
-}
 
 .open-about {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   height: 20rem;
   display: block;
@@ -138,34 +185,72 @@ body {
 
 #projects {
   padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 #projects .projects-container {
   margin-bottom: 2rem;
   border-bottom: 2px solid white;
 }
+
 #projects .projects-container .projects__img-container {
   position: relative;
   overflow: hidden;
-  margin-bottom: 0;
   border: 3px solid white;
-  border-bottom: none;
 }
-#projects .projects-container .projects__img-container:hover .shown-image {
+
+#projects .projects-container .projects__img-container:hover .hover-image {
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   top: 0;
 }
-#projects .projects-container .shown-image {
+
+#projects .projects-container .hover-image {
   position: absolute;
   top: 100%;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 #projects .projects-container img {
+  vertical-align: bottom;
   width: 100%;
 }
 
+#projects .projects-container .projects__text-container .projects__link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#projects .projects-container .projects__text-container .projects__link-container a {
+  width: 100%;
+  text-decoration: none;
+}
+
+#projects .projects-container .projects__text-container .projects__tools-container {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#projects .projects-container .projects__text-container .projects__tools-container .fab {
+  opacity: 0.5;
+}
+
 .open {
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   height: 5rem;
 }
@@ -175,13 +260,37 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-  @keyframes showEmail {
+  @-webkit-keyframes showEmail {
+    0% {
+    }
     30% {
       opacity: 0;
     }
     100% {
       opacity: 1;
       content: "raymond.doan94@gmail.com";
+    }
+  }
+  @keyframes showEmail {
+    0% {
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+  }
+  @-webkit-keyframes hideEmail {
+    0% {
+      opacity: 1;
+      content: "raymond.doan94@gmail.com";
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
     }
   }
   @keyframes hideEmail {
@@ -192,6 +301,16 @@ body {
     30% {
       opacity: 0;
     }
+    100% {
+    }
+  }
+  @-webkit-keyframes growLink {
+    0% {
+      width: 7.5rem;
+    }
+    100% {
+      width: 16rem;
+    }
   }
   @keyframes growLink {
     0% {
@@ -199,6 +318,14 @@ body {
     }
     100% {
       width: 16rem;
+    }
+  }
+  @-webkit-keyframes shrinkLink {
+    0% {
+      width: 16rem;
+    }
+    100% {
+      width: 7.5rem;
     }
   }
   @keyframes shrinkLink {
@@ -214,32 +341,48 @@ body {
     width: 100%;
     background-color: #181818;
     position: fixed;
-    justify-content: flex-start;
-    flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     border-bottom: 1px solid white;
     padding: 0 0 0;
   }
-
   .logo-container {
     height: 100%;
     font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-right: 1px solid white;
     padding: 0 0.5rem;
   }
-
   .menu-list {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-transition: none;
     transition: none;
     padding: none;
     opacity: 1;
   }
   .menu-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     overflow: hidden;
     border-bottom: none;
     border-right: 1px solid white;
@@ -247,46 +390,68 @@ body {
   }
   .menu-list li a {
     padding: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
   }
   .menu-list #contact-li {
-    animation: shrinkLink 1s forwards;
+    -webkit-animation: shrinkLink 1s forwards;
+            animation: shrinkLink 1s forwards;
   }
   .menu-list #contact-li .contact-link::after {
     content: "Contact Me";
-    animation: hideEmail 1s forwards;
+    -webkit-animation: hideEmail 1s forwards;
+            animation: hideEmail 1s forwards;
   }
   .menu-list #contact-li:hover {
-    animation: growLink 1s forwards;
+    -webkit-animation: growLink 1s forwards;
+            animation: growLink 1s forwards;
   }
   .menu-list #contact-li:hover .contact-link::after {
-    animation: showEmail 1s forwards;
+    -webkit-animation: showEmail 1s forwards;
+            animation: showEmail 1s forwards;
   }
-
   #icon-container {
     display: none;
   }
-
   #side-nav {
     height: 100vh;
     width: 4.3rem;
     left: 0;
     position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-right: 1px solid white;
   }
   #side-nav div {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #side-nav div li {
     width: 4.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-top: 1px solid white;
     padding: 0.5rem 0;
     list-style-type: none;
@@ -295,12 +460,10 @@ body {
     text-decoration: none;
     color: white;
   }
-
   .content-wrapper {
     max-width: 90vw;
     padding: 4rem 1rem 1rem 6rem;
   }
-
   #heading-container {
     max-width: 40rem;
   }
@@ -310,7 +473,6 @@ body {
   #heading-container h2 {
     font-size: 3rem;
   }
-
   #read-more {
     width: 8rem;
     background-color: #181818;
@@ -323,15 +485,16 @@ body {
     padding: 0.25rem 0.75rem;
     margin-bottom: 0.5rem;
     cursor: pointer;
+    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
   #read-more:hover {
     background-color: white;
     color: #181818;
   }
-
   .about {
     max-width: 40rem;
+    -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
     overflow: hidden;
   }
@@ -345,10 +508,8 @@ body {
     margin: 0.75rem 0;
     font-size: 0.8rem;
   }
-
   .open-about {
     height: 20rem;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
