@@ -142,12 +142,12 @@ p {
 // About Me Button
 #read-more {
   width: 8rem;
+  border: 2px solid white;
 }
 
 #read-more, a {
   background-color: $dark;
   color: white;
-  border: 2px solid white;
   text-align: center;
   font-family: "Rubik", sans-serif;
   font-size: 0.75rem;
@@ -186,53 +186,65 @@ p {
   flex-wrap: wrap;
 
   .projects-container {
-    margin-bottom: 2rem;
-    border-bottom: 2px solid white;
+    margin-bottom: 1rem;
+    
+    .projects__entry-container {
+      margin: 0.25rem;
+      border-bottom: 2px solid white;      
 
-    .projects__img-container {
-      position: relative;
-      overflow: hidden;
-      border: 3px solid white;
-
-      &:hover {
-        .hover-image {
-          transition: all 0.5s;
-          top: 0
+      .projects__img-container {
+        position: relative;
+        overflow: hidden;
+        border: 3px solid white;
+        border-bottom: 0px;
+  
+        &:hover {
+          .hover-image {
+            transition: all 0.5s;
+            top: 0
+          }
+        }
+  
+      }
+      .hover-image {
+        position: absolute;
+        top: 100%;
+        transition: all 0.5s;
+      }
+      img {
+        vertical-align: bottom;
+        width: 100%;
+      }
+  
+      .projects__text-container {
+        .projects__link-container {
+          display: flex;
+          justify-content: space-evenly;
+          a {
+            width: 100%;
+            border: 2px solid white;
+            text-decoration: none;
+          }
+        }
+  
+        .projects__tools-container {
+          margin: 1rem 0;
+          display: flex;
+          justify-content: space-evenly;
+  
+          .fab {
+            opacity: 0.5;
+          }
         }
       }
-
-    }
-    .hover-image {
-      position: absolute;
-      top: 100%;
-      transition: all 0.5s;
-    }
-    img {
-      vertical-align: bottom;
-      width: 100%;
     }
 
-    .projects__text-container {
-      .projects__link-container {
-        display: flex;
-        justify-content: space-evenly;
-        a {
-          width: 100%;
-          text-decoration: none;
-        }
-      }
-
-      .projects__tools-container {
-        margin: 1rem 0;
-        display: flex;
-        justify-content: space-evenly;
-
-        .fab {
-          opacity: 0.5;
-        }
-      }
-    }
   }
+}
+
+// Icon Size
+.fab {
+  font-size: 2rem;
 }
 
 // Toggle Hamburger Menu for Menu List
@@ -241,10 +253,6 @@ p {
   height: 5rem;
 }
 
-// Icon Size
-.fab {
-  font-size: 2rem;
-}
 
 // Desktop View
 @media screen and (min-width: 800px) {
@@ -294,10 +302,11 @@ p {
     width: 100%;
     background-color: $dark;
     position: fixed;
+    z-index: 100;
     justify-content: flex-start;
     flex-direction: row;
     border-bottom: 1px solid white;
-    padding: 0 0 0;
+    padding: 0;
   }
 
   .logo-container {
@@ -440,6 +449,35 @@ p {
       margin: 0.75rem 0;
       font-size: 0.8rem;
     };
+  }
+
+  // Projects
+  #projects {
+    max-width: 80%;
+
+    .projects-container {
+      max-width: 50%;
+
+      .projects__entry-container {
+        max-height: 100%;
+
+        .projects__img-container {
+          max-width: 100%;
+        }
+  
+        .projects__text-container {
+          .projects__link-container {
+            display: flex;
+            justify-content: space-evenly;
+            a {
+              width: 100%;
+              border: 2px solid white;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
   }
   
   // Toggle the About Section
