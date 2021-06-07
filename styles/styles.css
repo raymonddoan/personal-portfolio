@@ -172,7 +172,6 @@ h4 {
   font-size: 0.75rem;
   display: block;
   padding: 0.25rem 0.75rem;
-  margin-bottom: 0.5rem;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -265,6 +264,13 @@ h4 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+#projects .projects-container .projects__entry-container .projects__text-container .projects__tools-container img {
+  width: 47px;
+  opacity: 0.7;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 #projects .projects-container .projects__entry-container .projects__text-container .projects__tools-container .fab {
@@ -412,7 +418,7 @@ h4 {
     padding: none;
   }
   .menu-list li a {
-    padding: 0 0.75rem;
+    padding: 0 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -426,6 +432,14 @@ h4 {
     -webkit-animation: shrinkLink 1s forwards;
             animation: shrinkLink 1s forwards;
   }
+  .menu-list #contact-li .contact-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .menu-list #contact-li .contact-link::after {
     content: "Contact Me";
     -webkit-animation: hideEmail 1s forwards;
@@ -434,6 +448,9 @@ h4 {
   .menu-list #contact-li:hover {
     -webkit-animation: growLink 1s forwards;
             animation: growLink 1s forwards;
+  }
+  .menu-list #contact-li:hover .contact-link {
+    background-color: #181818;
   }
   .menu-list #contact-li:hover .contact-link::after {
     -webkit-animation: showEmail 1s forwards;
@@ -482,6 +499,9 @@ h4 {
   #side-nav div li a {
     text-decoration: none;
     color: white;
+  }
+  #side-nav div li a:hover {
+    background-color: #181818;
   }
   .content-wrapper {
     max-width: 90vw;
