@@ -150,12 +150,12 @@ p {
 
 #read-more {
   width: 8rem;
+  border: 2px solid white;
 }
 
 #read-more, a {
   background-color: #181818;
   color: white;
-  border: 2px solid white;
   text-align: center;
   font-family: "Rubik", sans-serif;
   font-size: 0.75rem;
@@ -197,35 +197,40 @@ p {
 }
 
 #projects .projects-container {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+#projects .projects-container .projects__entry-container {
+  margin: 0.25rem;
   border-bottom: 2px solid white;
 }
 
-#projects .projects-container .projects__img-container {
+#projects .projects-container .projects__entry-container .projects__img-container {
   position: relative;
   overflow: hidden;
   border: 3px solid white;
+  border-bottom: 0px;
 }
 
-#projects .projects-container .projects__img-container:hover .hover-image {
+#projects .projects-container .projects__entry-container .projects__img-container:hover .hover-image {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   top: 0;
 }
 
-#projects .projects-container .hover-image {
+#projects .projects-container .projects__entry-container .hover-image {
   position: absolute;
   top: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-#projects .projects-container img {
+#projects .projects-container .projects__entry-container img {
   vertical-align: bottom;
   width: 100%;
 }
 
-#projects .projects-container .projects__text-container .projects__link-container {
+#projects .projects-container .projects__entry-container .projects__text-container .projects__link-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,12 +239,13 @@ p {
           justify-content: space-evenly;
 }
 
-#projects .projects-container .projects__text-container .projects__link-container a {
+#projects .projects-container .projects__entry-container .projects__text-container .projects__link-container a {
   width: 100%;
+  border: 2px solid white;
   text-decoration: none;
 }
 
-#projects .projects-container .projects__text-container .projects__tools-container {
+#projects .projects-container .projects__entry-container .projects__text-container .projects__tools-container {
   margin: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,18 +255,18 @@ p {
           justify-content: space-evenly;
 }
 
-#projects .projects-container .projects__text-container .projects__tools-container .fab {
+#projects .projects-container .projects__entry-container .projects__text-container .projects__tools-container .fab {
   opacity: 0.5;
+}
+
+.fab {
+  font-size: 2rem;
 }
 
 .open {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   height: 5rem;
-}
-
-.fab {
-  font-size: 2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -345,6 +351,7 @@ p {
     width: 100%;
     background-color: #181818;
     position: fixed;
+    z-index: 100;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -353,7 +360,7 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
     border-bottom: 1px solid white;
-    padding: 0 0 0;
+    padding: 0;
   }
   .logo-container {
     height: 100%;
@@ -511,6 +518,31 @@ p {
     max-width: 90%;
     margin: 0.75rem 0;
     font-size: 0.8rem;
+  }
+  #projects {
+    max-width: 80%;
+  }
+  #projects .projects-container {
+    max-width: 50%;
+  }
+  #projects .projects-container .projects__entry-container {
+    max-height: 100%;
+  }
+  #projects .projects-container .projects__entry-container .projects__img-container {
+    max-width: 100%;
+  }
+  #projects .projects-container .projects__entry-container .projects__text-container .projects__link-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #projects .projects-container .projects__entry-container .projects__text-container .projects__link-container a {
+    width: 100%;
+    border: 2px solid white;
+    text-decoration: none;
   }
   .open-about {
     height: 20rem;
