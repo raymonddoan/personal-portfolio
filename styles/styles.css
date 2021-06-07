@@ -174,16 +174,16 @@ p {
 
 .about {
   max-width: 40rem;
-  height: 0;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  max-height: 0;
+  -webkit-transition: max-height 0.7s ease;
+  transition: max-height 0.7s ease;
   overflow: hidden;
 }
 
 .open-about {
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  height: 20rem;
+  max-height: 40rem;
+  -webkit-transition: max-height 1.25s ease;
+  transition: max-height 1.25s ease;
   display: block;
 }
 
@@ -545,7 +545,17 @@ p {
     text-decoration: none;
   }
   .open-about {
-    height: 20rem;
+    max-height: 15rem;
+    -webkit-transition: max-height 1s ease;
+    transition: max-height 1s ease;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .open-about {
+    max-height: 25rem;
+    -webkit-transition: max-height 1s ease;
+    transition: max-height 1s ease;
   }
 }
 /*# sourceMappingURL=styles.css.map */

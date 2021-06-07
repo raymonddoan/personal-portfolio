@@ -167,15 +167,15 @@ p {
 // About Me
 .about {
   max-width: 40rem;
-  height: 0;
-  transition: all 0.7s ease;
+  max-height: 0;
+  transition: max-height 0.7s ease;
   overflow: hidden;
 }
 
 // Toggle the About Section
 .open-about {
-  transition: all 1s ease;
-  height: 20rem;
+  max-height: 40rem;
+  transition: max-height 1.25s ease;
   display: block;
 }
 
@@ -484,6 +484,15 @@ p {
   
   // Toggle the About Section
   .open-about {
-    height: 20rem;
+    max-height: 15rem;
+    transition: max-height 1s ease;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  // Toggle the About Section
+  .open-about {
+    max-height: 25rem;
+    transition: max-height 1s ease;
   }
 }
