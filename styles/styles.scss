@@ -28,9 +28,16 @@ h3 {
   font-size: 1rem;
 }
 
-p {
+p, ul {
   margin: 0.5rem 0;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+h4 {
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 // Navbars
@@ -82,8 +89,10 @@ p {
   #cv-li {
     display: flex;
     justify-content: center;
-
+    
     .cv-link {
+      background-color: $dark;
+
       &::after {
         content: "Resume / CV";
         font-size: 0.75rem;
@@ -154,10 +163,10 @@ p {
 
   display: block;
   padding: 0.25rem 0.75rem;
-  margin-bottom: 0.5rem;
 
   cursor: pointer;
   transition: all 0.2s ease;
+
   &:hover {
     background-color: white;
     color: $dark;
@@ -167,15 +176,23 @@ p {
 // About Me
 .about {
   max-width: 40rem;
-  height: 0;
-  transition: all 0.7s ease;
+  max-height: 0;
+  transition: max-height 0.7s ease;
   overflow: hidden;
+
+  a {
+    text-align: none;
+    display: inline;
+    padding: 0;
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
 
 // Toggle the About Section
 .open-about {
-  transition: all 1s ease;
-  height: 20rem;
+  max-height: 45rem;
+  transition: max-height 1.25s ease;
   display: block;
 }
 
@@ -189,6 +206,7 @@ p {
     margin-bottom: 1rem;
     
     .projects__entry-container {
+      height: 100%;
       margin: 0.25rem;
       border-bottom: 2px solid white;      
 
@@ -208,6 +226,7 @@ p {
       }
       .hover-image {
         position: absolute;
+        width: 100%;
         top: 100%;
         transition: all 0.5s;
       }
@@ -217,6 +236,7 @@ p {
       }
   
       .projects__text-container {
+
         .projects__link-container {
           display: flex;
           justify-content: space-evenly;
@@ -231,7 +251,12 @@ p {
           margin: 1rem 0;
           display: flex;
           justify-content: space-evenly;
-  
+
+          img {
+            width: 47px;
+            opacity: 0.7;
+            filter: grayscale(1);
+          }
           .fab {
             opacity: 0.5;
           }
@@ -246,6 +271,7 @@ p {
 .fab {
   font-size: 2rem;
 }
+
 
 // Toggle Hamburger Menu for Menu List
 .open {
@@ -335,7 +361,7 @@ p {
       padding: none;
 
       a {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
         display: flex;
         align-items: center;
         transition: all 0.5s linear;
@@ -345,6 +371,8 @@ p {
     #contact-li {
       animation: shrinkLink 1s forwards;
       .contact-link {
+        display: flex;
+        justify-content: center;
         &::after {
           content: "Contact Me";
           animation: hideEmail 1s forwards;
@@ -353,6 +381,7 @@ p {
       &:hover {
         animation: growLink 1s forwards;
         .contact-link {
+          background-color: $dark ;
           &::after {
             animation: showEmail 1s forwards;
           }
@@ -391,6 +420,10 @@ p {
         a{
           text-decoration: none;
           color: white;
+
+          &:hover {
+            background-color: $dark;
+          }
         }
       }
     }
@@ -453,28 +486,43 @@ p {
 
   // Projects
   #projects {
-    max-width: 80%;
+    max-width: 70%;
 
     .projects-container {
       max-width: 50%;
 
       .projects__entry-container {
-        max-height: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 
         .projects__img-container {
           max-width: 100%;
         }
   
         .projects__text-container {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+
           .projects__link-container {
-            display: flex;
-            justify-content: space-evenly;
             a {
               width: 100%;
               border: 2px solid white;
               text-decoration: none;
             }
           }
+
+          .projects__contents-container {
+            p, ul {
+              font-size: 0.8rem;
+            }
+          }
+
+          .projects__tools-container {
+            margin-top: auto;
+          }
+
         }
       }
     }
@@ -482,6 +530,15 @@ p {
   
   // Toggle the About Section
   .open-about {
-    height: 20rem;
+    max-height: 15rem;
+    transition: max-height 1s ease;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  // Toggle the About Section
+  .open-about {
+    max-height: 25rem;
+    transition: max-height 1s ease;
   }
 }
