@@ -30,7 +30,14 @@ h3 {
 
 p {
   margin: 0.5rem 0;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+h4 {
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 // Navbars
@@ -82,8 +89,10 @@ p {
   #cv-li {
     display: flex;
     justify-content: center;
-
+    
     .cv-link {
+      background-color: $dark;
+
       &::after {
         content: "Resume / CV";
         font-size: 0.75rem;
@@ -158,6 +167,7 @@ p {
 
   cursor: pointer;
   transition: all 0.2s ease;
+
   &:hover {
     background-color: white;
     color: $dark;
@@ -174,7 +184,7 @@ p {
 
 // Toggle the About Section
 .open-about {
-  max-height: 40rem;
+  max-height: 45rem;
   transition: max-height 1.25s ease;
   display: block;
 }
@@ -208,6 +218,7 @@ p {
       }
       .hover-image {
         position: absolute;
+        width: 100%;
         top: 100%;
         transition: all 0.5s;
       }
@@ -335,7 +346,7 @@ p {
       padding: none;
 
       a {
-        padding: 0 1rem;
+        padding: 0 0.75rem;
         display: flex;
         align-items: center;
         transition: all 0.5s linear;
@@ -453,7 +464,7 @@ p {
 
   // Projects
   #projects {
-    max-width: 80%;
+    max-width: 70%;
 
     .projects-container {
       max-width: 50%;

@@ -25,7 +25,14 @@ h3 {
 
 p {
   margin: 0.5rem 0;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+h4 {
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 #top-nav {
@@ -92,6 +99,10 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.menu-list #cv-li .cv-link {
+  background-color: #181818;
 }
 
 .menu-list #cv-li .cv-link::after {
@@ -181,7 +192,7 @@ p {
 }
 
 .open-about {
-  max-height: 40rem;
+  max-height: 45rem;
   -webkit-transition: max-height 1.25s ease;
   transition: max-height 1.25s ease;
   display: block;
@@ -220,6 +231,7 @@ p {
 
 #projects .projects-container .projects__entry-container .hover-image {
   position: absolute;
+  width: 100%;
   top: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -400,7 +412,7 @@ p {
     padding: none;
   }
   .menu-list li a {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -520,7 +532,7 @@ p {
     font-size: 0.8rem;
   }
   #projects {
-    max-width: 80%;
+    max-width: 70%;
   }
   #projects .projects-container {
     max-width: 50%;

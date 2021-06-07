@@ -17,7 +17,7 @@ readMore.addEventListener("click", (e) => {
 
   aboutMeSection.classList.toggle("open-about");
   if (!toggle) {
-    readMore.textContent = "Yay!";
+    readMore.textContent = "Hey There!";
     toggle = true;
   } else {
     readMore.textContent = "About Me";
