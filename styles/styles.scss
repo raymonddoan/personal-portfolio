@@ -28,7 +28,7 @@ h3 {
   font-size: 1rem;
 }
 
-p {
+p, ul {
   margin: 0.5rem 0;
   font-size: 0.7rem;
   font-weight: 300;
@@ -163,7 +163,6 @@ h4 {
 
   display: block;
   padding: 0.25rem 0.75rem;
-  // margin-bottom: 0.5rem;
 
   cursor: pointer;
   transition: all 0.2s ease;
@@ -180,6 +179,14 @@ h4 {
   max-height: 0;
   transition: max-height 0.7s ease;
   overflow: hidden;
+
+  a {
+    text-align: none;
+    display: inline;
+    padding: 0;
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
 
 // Toggle the About Section
@@ -199,6 +206,7 @@ h4 {
     margin-bottom: 1rem;
     
     .projects__entry-container {
+      height: 100%;
       margin: 0.25rem;
       border-bottom: 2px solid white;      
 
@@ -228,6 +236,7 @@ h4 {
       }
   
       .projects__text-container {
+
         .projects__link-container {
           display: flex;
           justify-content: space-evenly;
@@ -483,22 +492,35 @@ h4 {
       max-width: 50%;
 
       .projects__entry-container {
-        max-height: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 
         .projects__img-container {
           max-width: 100%;
         }
   
         .projects__text-container {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
 
           .projects__link-container {
-            display: flex;
-            justify-content: space-evenly;
             a {
               width: 100%;
               border: 2px solid white;
               text-decoration: none;
             }
+          }
+
+          .projects__contents-container {
+            p, ul {
+              font-size: 0.8rem;
+            }
+          }
+
+          .projects__tools-container {
+            margin-top: auto;
           }
 
         }
